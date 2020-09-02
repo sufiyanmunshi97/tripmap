@@ -1,8 +1,8 @@
 view: map_layer_territory {
   derived_table: {
-    sql: select '614SD' as TERRITORY_CODE, '1000' as Sales
-      union select '117', '2000'
-      UNION select '106', '3000'
+    sql: select '57198' as ZIP_CODE, '1000' as Sales
+      union select '57196', '2000'
+      UNION select '57197', '3000'
        ;;
   }
 
@@ -11,10 +11,10 @@ view: map_layer_territory {
     drill_fields: [detail*]
   }
 
-  dimension: TERRITORY_CODE {
+  dimension: ZIP_CODE{
     type: string
     map_layer_name: territory
-    sql: ${TABLE}."TERRITORY_CODE" ;;
+    sql: ${TABLE}."ZIP_CODE" ;;
   }
 
   measure: sales {
@@ -23,6 +23,6 @@ view: map_layer_territory {
   }
 
   set: detail {
-    fields: [TERRITORY_CODE, sales]
+    fields: [ZIP_CODE, sales]
   }
 }
