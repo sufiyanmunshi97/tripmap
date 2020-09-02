@@ -1,6 +1,6 @@
 view: map_layer_territory {
   derived_table: {
-    sql: select '57198' as ZIP_CODE, '614SD' as TERRITORY_CODE,'43.6746' as Latitude,'-96.7913' as Longitude, '2000' as Sales
+    sql: select '57198' as "ZIP_CODE", '614SD' as "TERRITORY_CODE",'43.6746' as "Latitude",'-96.7913' as "Longitude", '2000' as Sales
       union select '57196','614SD','43.6746','-96.7913','2000'
       union select '57197','614SD','43.6746','-96.7913','2000'
       union select '57198','614SD','43.6746','-96.7913', '2000'
