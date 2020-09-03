@@ -3,12 +3,10 @@ view: map_layer_route {
     sql: select 'Mainpath' as Route, '1' as path
        union select 'Alternative','2';;
   }
-
   measure: count {
     type: count
     drill_fields: [detail*]
   }
-
   dimension: Route {
     type: string
     map_layer_name: route
@@ -18,7 +16,6 @@ view: map_layer_route {
     type: number
     sql: ${TABLE}."PATH" ;;
   }
-
   set: detail {
     fields: [Route,path]
   }
