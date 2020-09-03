@@ -1,8 +1,7 @@
-view: map_layer_territory {
+view: map_layer_route {
   derived_table: {
     sql: select 'Mainpath' as Route, '1' as path
-      union select 'Alternative','2'
-       ;;
+       union select 'Alternative','2';;
   }
 
   measure: count {
@@ -12,11 +11,11 @@ view: map_layer_territory {
 
   dimension: Route {
     type: string
-    map_layer_name: territory
+    map_layer_name: route
     sql: ${TABLE}."Route" ;;
   }
   measure: path {
-    type: sum
+    type: number
     sql: ${TABLE}."path" ;;
   }
 
