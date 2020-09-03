@@ -16,7 +16,6 @@ view: map_layer_territory {
     sql: ${TABLE}."Route" ;;
   }
 
-
   set: detail {
     fields: [Route]
   }
