@@ -1,7 +1,7 @@
 view: map_layer_territory {
   derived_table: {
-    sql: select 'main_path' as Route, '1' as path
-      union select 'alternative','2'
+    sql: select "Mainpath" as "Route", '1' as "path"
+      union select "Alternative",'2'
        ;;
   }
 
