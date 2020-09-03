@@ -12,11 +12,11 @@ view: map_layer_route {
   dimension: Route {
     type: string
     map_layer_name: route
-    sql: ${TABLE}."Route" ;;
+    sql: ${TABLE}."ROUTE" ;;
   }
   measure: path {
     type: number
-    sql: ${TABLE}."path" ;;
+    sql: ${TABLE}."PATH" ;;
   }
 
   set: detail {
